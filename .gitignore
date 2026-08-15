@@ -104,3 +104,7 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# 大容量BGMパック(約508MB)はgit管理外。PC間はUSB/クラウドで .meta ごと手動コピーすること。
+/[Aa]ssets/LUShvalleySound/
+/[Aa]ssets/LUShvalleySound.meta
