@@ -10,13 +10,13 @@ public class GameConstants
     public const int InitialFloor = 1;// 最初の階層
 
     public const int HeroBaseHp = 45;// プレイヤーのHP
-    public const int HeroRateHp = 5;// プレイヤーのレベル1ごとの上昇HP
+    public const int HeroRateHp = 5;// プレイヤーのレベル1ごとのHP
 
     public const int EnemyBaseHp = 8;// 敵キャラのHP
-    public const int EnemyRateHp = 3;// 敵キャラのレベル1ごとの上昇HP
+    public const int EnemyRateHp = 3;// 敵キャラのレベル1ごとのHP
 
     public const int HeroBaseAttack = 3;// プレイヤーの攻撃力
-    public const int HeroRateAttack = 3;// プレイヤーのレベル1ごとの上昇攻撃力
+    public const int HeroRateAttack = 3;// プレイヤーのレベル1ごとの攻撃力
 
     public const int EncountRate = 50;// 敵キャラとの遭遇率（％）
 
@@ -26,7 +26,13 @@ public class GameConstants
 
     public const float RecoveryRate = 0.2f;// HPの回復量
 
-    public const int RecoveryCT = 3;// 回復スキルのクールタイム
+    public const int RecoveryCT = 3;// 
 
     public const float TurnSpeed = 1f;// ターンの処理の待ち時間
+
+    public const float ShakeDuration = 0.2f;// 揺れ演出の揺れの時間（秒）
+
+    public const float ShakeMagnitude = 0.1f; // 揺れ演出の揺れの強さ
+
+    public const float BattleFinishDelay = 1f;// 戦闘終了時の演出ステップの待機時間
 }

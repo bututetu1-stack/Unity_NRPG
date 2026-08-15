@@ -6,8 +6,8 @@ public enum SceneCode
     Title,
     Dungeon,
     Battle,
-    End,
-    Start
+    Result, // Endから変更。Sceneファイル名に合わせました。
+    //Start 不要（この行は削除してもらっても構いません）
 }
 
 public class GameManager : MonoBehaviour
@@ -52,4 +52,17 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneCode.ToString());
     }
 
+    // 戦闘に勝利したら呼び出す
+    public void BattleWon()
+    {
+        PlayRecord.EnemyStatus = null;// 敵キャラデータ削除
+        LoadScene(SceneCode.Dungeon);// ダンジョンシーンに遷移
+    }
+
+    // 戦闘に敗北したら呼び出す
+    public void BattleLost()
+    {
+        PlayRecord.EnemyStatus = null;// 敵キャラデータ削除
+        LoadScene(SceneCode.Result);// リザルトシーンに遷移
+    }
 }

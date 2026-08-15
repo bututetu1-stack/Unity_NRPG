@@ -71,4 +71,28 @@ public class UnitStatus
     {
         if (CT > 0) CT--;
     }
+
+    // 獲得できる経験値（敵キャラのみ使用）
+    public int GetExp()
+    {
+        return Level;// レベルがそのまま経験値となる
+    }
+
+    // 次のレベルアップに必要な経験値（主人公のみ使用）
+    public int GetNextExp()
+    {
+        return Level * Level;// 計算式は「現在のレベル × 現在のレベル」
+    }
+
+    // レベルアップしたかどうかの判定（レベルアップしたらTrueを返す）
+    public bool LevelUp()
+    {
+        if (Exp >= GetNextExp())
+        {
+            Exp -= GetNextExp();// 必要経験値を減らしておく
+            Level++;
+            return true;
+        }
+        return false;
+    }
 }
