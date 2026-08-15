@@ -148,6 +148,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9398c185313a228439461b518cdddfcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  PlayRecord:
+    SceneCode: 0
+    DungeonStatus:
+      Floor: 0
+      Food: 0
+    HeroStatus:
+      ID: 
+      Level: 0
+      Exp: 0
+      HP: 0
+    EnemyStatus:
+      ID: 
+      Level: 0
+      Exp: 0
+      HP: 0
+    Bonus: 0
+    BonusFood: 0
+    BonusLevel: 0
 --- !u!4 &296731188
 Transform:
   m_ObjectHideFlags: 0
@@ -434,6 +452,7 @@ MonoBehaviour:
   TitleBGM: {fileID: 8300000, guid: bf2cdcee8f5924bacafd60b7f26dcaed, type: 3}
   DungeonBGM: {fileID: 8300000, guid: f2d5fe2ba3a5b43629878781af4390e8, type: 3}
   TouchSE: {fileID: 8300000, guid: 35cf7766e9e2aa542811e896fde57989, type: 3}
+  RecoverySE: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
 --- !u!4 &858923668
 Transform:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip TitleBGM;
     public AudioClip DungeonBGM;
     public AudioClip TouchSE;
+    public AudioClip RecoverySE;
 
     private void Awake()
     {
@@ -55,5 +56,10 @@ public class SoundManager : MonoBehaviour
     public void PlayTouchSE()
     {
         audioSource.PlayOneShot(TouchSE);
+    }
+
+    public void PlayRecoverySE()
+    {
+        audioSource.PlayOneShot(RecoverySE);
     }
 }

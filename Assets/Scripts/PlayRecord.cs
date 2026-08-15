@@ -24,4 +24,10 @@ public class PlayRecord
         DungeonStatus.Floor++;
         DungeonStatus.Food--;
     }
+
+    public void Rest()
+    {
+        HeroStatus.Recovery();
+        DungeonStatus.Food--;
+    }
 }

@@ -28,4 +28,15 @@ public class UnitStatus
             return GameConstants.EnemyBaseHp + Level * GameConstants.EnemyRateHp;
         }
     }
+
+    public int GetRecovery()
+    {
+        return (int)(GetMaxHP() * GameConstants.RecoveryRate);
+    }
+
+    public void Recovery()
+    {
+        HP += GetRecovery();
+        if (HP > GetMaxHP()) HP = GetMaxHP();
+    }
 }
