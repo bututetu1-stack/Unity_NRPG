@@ -20,9 +20,13 @@ public class GameConstants
 
     public const int EncountRate = 50;// 敵キャラとの遭遇率（％）
 
-    public const float MoveSpeed = 3f;// 前進の速さ
+    public const float MoveSpeed = 3f;// 前進の処理の早さ
 
     public const float MoveDistance = 3f;// 前進した時のカメラの移動距離
 
     public const float RecoveryRate = 0.2f;// HPの回復量
+
+    public const int RecoveryCT = 3;// 回復スキルのクールタイム
+
+    public const float TurnSpeed = 1f;// ターンの処理の待ち時間
 }
