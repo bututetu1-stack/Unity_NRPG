@@ -10,16 +10,19 @@ public class GameConstants
     public const int InitialFloor = 1;// 最初の階層
 
     public const int HeroBaseHp = 45;// プレイヤーのHP
-    public const int HeroRateHp = 5;// プレイヤーのレベル1ごとのHP
+    public const int HeroRateHp = 5;// プレイヤーのレベル1ごとの上昇HP
 
     public const int EnemyBaseHp = 8;// 敵キャラのHP
-    public const int EnemyRateHp = 3;// 敵キャラのレベル1ごとのHP
+    public const int EnemyRateHp = 3;// 敵キャラのレベル1ごとの上昇HP
 
-    public const int EncountRate = 50;//敵キャラとの遭遇率
+    public const int HeroBaseAttack = 3;// プレイヤーの攻撃力
+    public const int HeroRateAttack = 3;// プレイヤーのレベル1ごとの上昇攻撃力
 
-    public const float MoveSpeed = 3f;//前進の速さ
+    public const int EncountRate = 50;// 敵キャラとの遭遇率（％）
 
-    public const float MoveDistance = 3f;//前進したときのカメラの移動距離
+    public const float MoveSpeed = 3f;// 前進の速さ
 
-    public const float RecoveryRate =0.2f;//HPの回復量
+    public const float MoveDistance = 3f;// 前進した時のカメラの移動距離
+
+    public const float RecoveryRate = 0.2f;// HPの回復量
 }

@@ -166,6 +166,7 @@ MonoBehaviour:
     Bonus: 0
     BonusFood: 0
     BonusLevel: 0
+  EnemyData: {fileID: 11400000, guid: 0dee1211bd68c0346977678f259ca216, type: 2}
 --- !u!4 &296731188
 Transform:
   m_ObjectHideFlags: 0
@@ -451,6 +452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
   TitleBGM: {fileID: 8300000, guid: bf2cdcee8f5924bacafd60b7f26dcaed, type: 3}
   DungeonBGM: {fileID: 8300000, guid: f2d5fe2ba3a5b43629878781af4390e8, type: 3}
+  BattleBGM: {fileID: 8300000, guid: 45dc23c6e773e4bfb80e0c418a6007cf, type: 3}
   TouchSE: {fileID: 8300000, guid: 35cf7766e9e2aa542811e896fde57989, type: 3}
   RecoverySE: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
 --- !u!4 &858923668

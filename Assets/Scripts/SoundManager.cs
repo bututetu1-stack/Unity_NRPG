@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip TitleBGM;
     public AudioClip DungeonBGM;
+    public AudioClip BattleBGM;
     public AudioClip TouchSE;
     public AudioClip RecoverySE;
 
@@ -51,6 +52,11 @@ public class SoundManager : MonoBehaviour
     public void PlayDungeonBGM()
     {
         PlayBgm(DungeonBGM);
+    }
+
+    public void PlayBattleBGM()
+    {
+        PlayBgm(BattleBGM);
     }
 
     public void PlayTouchSE()

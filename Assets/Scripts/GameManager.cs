@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;// ここに追加
 
 public enum SceneCode
 {
@@ -12,25 +12,29 @@ public enum SceneCode
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager Instance;// 静的な変数
 
-    public PlayRecord PlayRecord;
+    public PlayRecord PlayRecord;// プレイデータ
 
+    public EnemyData EnemyData;// 敵キャラデータ
+
+    // Startメソッドより先に呼び出される
     private void Awake()
     {
         if (Instance == null)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            Instance = this;// 実体化されたらいつでもアクセス可能
+            DontDestroyOnLoad(gameObject);// シーンをまたいでもオブジェクトは消えない
 
-            PlayRecord = new PlayRecord();
-            PlayRecord.InitStatus();
+            PlayRecord = new PlayRecord();// プレイデータを作成しておく（仮）
+            PlayRecord.InitStatus();// プレイデータの初期化
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject);// すでに存在していたら削除
         }
     }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -47,4 +51,5 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneCode.ToString());
     }
+
 }
