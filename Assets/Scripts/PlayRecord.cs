@@ -18,4 +18,10 @@ public class PlayRecord
         HeroStatus = new UnitStatus("HERO", BonusLevel);
         EnemyStatus = null;
     }
+
+    public void AdvanceFloor()
+    {
+        DungeonStatus.Floor++;
+        DungeonStatus.Food--;
+    }
 }

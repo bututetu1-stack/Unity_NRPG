@@ -14,12 +14,17 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public PlayRecord PlayRecord;
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            PlayRecord = new PlayRecord();
+            PlayRecord.InitStatus();
         }
         else
         {

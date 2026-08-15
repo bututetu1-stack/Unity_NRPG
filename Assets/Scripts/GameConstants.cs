@@ -14,4 +14,8 @@ public class GameConstants
 
     public const int EnemyBaseHp = 8;// 敵キャラのHP
     public const int EnemyRateHp = 3;// 敵キャラのレベル1ごとのHP
+
+    public const int EncountRate = 50;//敵キャラとの遭遇率
+
+    public const float MoveSpeed = 1f;//前進の処理の速さ
 }
