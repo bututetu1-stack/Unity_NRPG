@@ -458,6 +458,7 @@ MonoBehaviour:
   TitleBGM: {fileID: 8300000, guid: bf2cdcee8f5924bacafd60b7f26dcaed, type: 3}
   DungeonBGM: {fileID: 8300000, guid: f2d5fe2ba3a5b43629878781af4390e8, type: 3}
   BattleBGM: {fileID: 8300000, guid: 45dc23c6e773e4bfb80e0c418a6007cf, type: 3}
+  ResultBGM: {fileID: 8300000, guid: 919ab21e0f92a4aa492915577aa9328d, type: 3}
   TouchSE: {fileID: 8300000, guid: 35cf7766e9e2aa542811e896fde57989, type: 3}
   RecoverySE: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
   DamageSE: {fileID: 8300000, guid: 88b1cbe3caa3fee4b8b103b5edd7aba9, type: 3}

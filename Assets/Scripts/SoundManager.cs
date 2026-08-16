@@ -3,13 +3,14 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
-    private AudioSource[] audioSources;// アタッチした2つのAudioSourceを代入
+    private AudioSource[] audioSources;// アタッチした2つのAudioSorceを代入
     private AudioSource audioSource;
     private AudioSource bgmSource;// BGM用のAudioSource
 
     public AudioClip TitleBGM;
     public AudioClip DungeonBGM;
     public AudioClip BattleBGM;
+    public AudioClip ResultBGM;
     public AudioClip TouchSE;
     public AudioClip RecoverySE;
     public AudioClip DamageSE;
@@ -22,7 +23,7 @@ public class SoundManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            audioSources = GetComponents<AudioSource>();// アタッチした2つのAudioSourceを配列で取得
+            audioSources = GetComponents<AudioSource>();// アタッチした2つのAudioSorceを配列で取得
             audioSource = audioSources[0];// 1つめを効果音用にする
             bgmSource = audioSources[1];// 2つめをBGM用にする
             DontDestroyOnLoad(this);
@@ -65,6 +66,10 @@ public class SoundManager : MonoBehaviour
     {
         PlayBgm(BattleBGM);
     }
+    public void PlayResultBGM()
+    {
+        PlayBgm(ResultBGM);
+    }
 
     public void PlayTouchSE()
     {
@@ -98,6 +103,6 @@ public class SoundManager : MonoBehaviour
 
     public void StopBGM()
     {
-        bgmSource.Stop();// BGMを止める
+        bgmSource.Stop();
     }
 }
