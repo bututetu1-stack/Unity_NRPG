@@ -72,6 +72,8 @@ public class DungeonDirector : MonoBehaviour
         {
             ButtonMove.SetActive(true);// 連打を防ぐために一時的に非表示にする
             ButtonRest.SetActive(true);
+
+            GameManager.Instance.Save();// データの保存
         }
     }
 

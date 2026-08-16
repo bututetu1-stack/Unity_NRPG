@@ -55,14 +55,36 @@ public class GameManager : MonoBehaviour
     // 戦闘に勝利したら呼び出す
     public void BattleWon()
     {
-        PlayRecord.EnemyStatus = null;// 敵キャラデータ削除
-        LoadScene(SceneCode.Dungeon);// ダンジョンシーンに遷移
+        PlayRecord.EnemyStatus = null;
+        LoadScene(SceneCode.Dungeon);
     }
 
     // 戦闘に敗北したら呼び出す
     public void BattleLost()
     {
-        PlayRecord.EnemyStatus = null;// 敵キャラデータ削除
-        LoadScene(SceneCode.Result);// リザルトシーンに遷移
+        PlayRecord.EnemyStatus = null;
+        LoadScene(SceneCode.Result);
+    }
+
+    public void Save()
+    {
+        string json = JsonUtility.ToJson(PlayRecord);// PlayRecordをシリアライズする
+        PlayerPrefs.SetString(Application.productName, json);// アプリ名をキーにして保存する
+    }
+
+    public void Load()
+    {
+        string json = PlayerPrefs.GetString(Application.productName);// 保存している文字列を取得
+        if (string.IsNullOrEmpty(json))
+        {
+            // 文字列がnullか空白の場合は保存データがない（新規プレイ）
+            PlayRecord = new PlayRecord();
+            PlayRecord.InitStatus();
+        }
+        else
+        {
+            // 文字列を取得できたらPlayRecordクラスにデシリアライズしてPlayRecordに代入する
+            PlayRecord = JsonUtility.FromJson<PlayRecord>(json);
+        }
     }
 }

@@ -26,7 +26,7 @@ public class GameConstants
 
     public const float RecoveryRate = 0.2f;// HPの回復量
 
-    public const int RecoveryCT = 3;// 
+    public const int RecoveryCT = 3;// 回復スキルのクールタイム
 
     public const float TurnSpeed = 1f;// ターンの処理の待ち時間
 
@@ -35,4 +35,6 @@ public class GameConstants
     public const float ShakeMagnitude = 0.1f; // 揺れ演出の揺れの強さ
 
     public const float BattleFinishDelay = 1f;// 戦闘終了時の演出ステップの待機時間
+
+    public const int UpgradeStartCost = 1;// ポイントで強化するときの基本コスト
 }

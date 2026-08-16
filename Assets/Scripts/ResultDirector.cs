@@ -22,6 +22,8 @@ public class ResultDirector : MonoBehaviour
         PointText.text = point.ToString();// 取得したポイントを表示
 
         GameManager.Instance.PlayRecord.SceneCode = SceneCode.Title;// タイトルシーンを登録しておく
+
+        GameManager.Instance.Save();// データの保存
     }
 
     // Update is called once per frame

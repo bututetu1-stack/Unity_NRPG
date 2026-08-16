@@ -81,6 +81,8 @@ public class BattleDirector : MonoBehaviour
 
         heroStatus.ProgressCT();// CTを進める
 
+        GameManager.Instance.Save();
+
         AttackCommand.SetActive(true);// スキルボタンの表示
         DefenseCommand.SetActive(true);
         RecoveryCommand.SetActive(heroStatus.CT == 0);// CTが回復していたら表示
